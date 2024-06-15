@@ -5,5 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   <script defer src="main.js"></script></head>
-  <body></body>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel img-group-1">
+        <!-- generate carousel in divs with correct class, use JSON and another class to assign a carousel to a group of images -->
+        <div class="img-left"></div>
+        <div class="img-focus"></div>
+        <div class="img-right"></div>
+        <div class="selector">
+          <!-- generate dots for each image in carousel -->
+          <button class="selector-node"></button>
+          <button class="selector-node selected"></button>
+          <button class="selector-node"></button>
+        </div>
+      </div>
+      <div class="carousel img-group-2"></div>
+    </div>
+
+    <div class="dropdown-container">
+      <div class="card">
+        <div class="content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+        <button class="dropdown-btn"></button>
+        <div class="dropdown">hide me</div>
+      </div>
+      <div class="card">
+        <div class="content">
+          Natus saepe libero temporibus maiores corrupti molestias veritatis
+          reiciendis deserunt consequuntur, illo, ut non blanditiis dolorem
+          magni nisi possimus rem veniam nihil?
+        </div>
+        <button class="dropdown-btn"></button>
+        <div class="dropdown">show me</div>
+      </div>
+      <div class="card">
+        <div class="content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+        <div class="dropdown-mouseover"></div>
+        <div class="dropdown">hide me</div>
+      </div>
+    </div>
+  </body>
 </html>
