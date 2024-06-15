@@ -9,7 +9,18 @@
     "build_p": "webpack --config webpack.prod.js",
     "gh_deploy": "git subtree push --prefix dist origin gh-pages"
   },
-  "prettier": {},
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "*.css"
+        ],
+        "options": {
+          "tabWidth": 4
+        }
+      }
+    ]
+  },
   "author": "WitherMite",
   "license": "ISC",
   "devDependencies": {
