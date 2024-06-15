@@ -1,7 +1,7 @@
 {
-  "name": "webpack-template",
+  "name": "dropdowns-and-carousels",
   "version": "1.0.0",
-  "description": "",
+  "description": "Odin Project assignment to reinforce learned skills",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "gh_deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "prettier": {},
-  "author": "",
+  "author": "WitherMite",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.5.0",
@@ -22,5 +22,13 @@
     "webpack": "^5.92.0",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WitherMite/dropdowns-and-carousels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WitherMite/dropdowns-and-carousels/issues"
+  },
+  "homepage": "https://github.com/WitherMite/dropdowns-and-carousels#readme"
 }
