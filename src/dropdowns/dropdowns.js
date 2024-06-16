@@ -31,7 +31,7 @@ function addMouseoverBehavior(ele) {
     `.${dropdown.dataset.boundingClass}`
   );
 
-  ele.addEventListener("mouseenter", () => {
+  ele.addEventListener("mouseover", () => {
     dropdown.classList.add(openClass);
     boundingBoxes.forEach((box) => box.classList.add(openClass));
   });
