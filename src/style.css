@@ -1,5 +1,6 @@
 :root {
     --background-color: rgb(58, 58, 58);
+    --primary-color: rgb(39, 39, 39);
     --font-color: rgb(230, 230, 230);
 }
 
@@ -7,6 +8,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+    text-align: center;
+    border: none;
+    color: inherit;
+    background-color: transparent;
 }
 
 body {
@@ -24,6 +34,7 @@ body {
 .carousel-container,
 .dropdown-container {
     flex: 1;
+    align-self: center;
 }
 
 .carousel-container,
@@ -40,7 +51,7 @@ body {
     gap: 0.75rem;
 }
 
-.carousel-img-container > button {
+.carousel-img-container button {
     align-self: center;
 }
 
@@ -61,5 +72,46 @@ body {
 
 .dropdown-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 3px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown,
+.dropdown-btn,
+.dropdown-mouseover {
+    position: absolute;
+}
+
+.dropdown-btn,
+.dropdown-mouseover {
+    top: 1rem;
+    right: 1rem;
+}
+
+.dropdown {
+    bottom: 0.25rem;
+    right: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border: 2px solid rgb(29, 29, 29);
+    border-radius: 12px;
+    box-shadow: 3px 19px 21px -15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+.open {
+    display: block;
 }

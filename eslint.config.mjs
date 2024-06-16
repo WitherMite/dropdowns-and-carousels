@@ -18,4 +18,7 @@ export default [
       sourceType: "commonjs",
     },
   },
+  {
+    ignores: ["dist/"],
+  },
 ];
