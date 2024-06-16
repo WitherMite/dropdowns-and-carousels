@@ -40,9 +40,9 @@
         <div class="content">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </div>
-        <button class="dropdown-btn">
+        <button class="dropdown-btn" data-for-class="d1">
           . . .
-          <div class="dropdown">hide me</div>
+          <div class="dropdown d1">hide me</div>
         </button>
       </div>
       <div class="card">
@@ -51,18 +51,19 @@
           reiciendis deserunt consequuntur, illo, ut non blanditiis dolorem
           magni nisi possimus rem veniam nihil?
         </div>
-        <button class="dropdown-btn">
+        <button class="dropdown-btn" data-for-class="d2">
           . . .
-          <div class="dropdown open">show me</div>
+          <div class="dropdown d2">show me</div>
         </button>
       </div>
       <div class="card">
         <div class="content">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </div>
-        <div class="dropdown-mouseover">
-          . . .
-          <div class="dropdown">hide me</div>
+        <div class="dropdown-mouseover-container">
+          <div class="dropdown-mouseover" data-for-class="d3">. . .</div>
+          <div class="dropdown d3" data-bounding-class="d3-bounds">hide me</div>
+          <div class="d3-bounds dropdown-bounds"></div>
         </div>
       </div>
     </div>
