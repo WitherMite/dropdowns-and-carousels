@@ -1,23 +1,17 @@
-let [btnClass, mouseoverClass, openClass] = [
-  ".dropdown-btn",
-  ".dropdown-mouseover",
-  "open",
-];
+let openClass;
 
-export default function initDropdowns(classArr = null) {
-  setClasses(classArr);
+export default function initDropdowns(
+  btnClass = "dropdown-btn",
+  mouseoverClass = "dropdown-mouseover",
+  open = "open"
+) {
+  openClass = open;
 
-  const dropdownBtns = document.querySelectorAll(btnClass);
-  const dropdownMouseovers = document.querySelectorAll(mouseoverClass);
+  const dropdownBtns = document.querySelectorAll(`.${btnClass}`);
+  const dropdownMouseovers = document.querySelectorAll(`.${mouseoverClass}`);
 
   dropdownBtns.forEach((btn) => addButtonBehavior(btn));
   dropdownMouseovers.forEach((element) => addMouseoverBehavior(element));
-}
-
-function setClasses(classArr) {
-  if (!classArr) return;
-  const classes = sanitize(classArr);
-  [btnClass, mouseoverClass, openClass] = classes;
 }
 
 function addButtonBehavior(btn) {
@@ -42,9 +36,4 @@ function addMouseoverBehavior(ele) {
       boundingBoxes.forEach((box) => box.classList.remove(openClass));
     });
   });
-}
-
-function sanitize(classArr) {
-  // make sure all are valid strings, fix if close enough
-  return [...classArr];
 }
