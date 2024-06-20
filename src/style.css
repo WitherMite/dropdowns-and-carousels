@@ -39,6 +39,7 @@ body {
 
 .carousel-container,
 .carousel {
+    max-width: 85vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,8 +52,36 @@ body {
     gap: 0.75rem;
 }
 
-.carousel-img-container button {
+.carousel-wheel {
+    position: relative;
+}
+
+.carousel-wheel button {
+    --height: 50px;
+    --width: 30px;
+    height: var(--height);
+    width: var(--width);
+    position: absolute;
+    top: calc(50% - calc(var(--height) / 2));
+    --side-positioning: calc(-1 * calc(var(--width) + 0.75rem));
     align-self: center;
+}
+
+.carousel-nav-left {
+    left: var(--side-positioning);
+}
+
+.carousel-nav-right {
+    right: var(--side-positioning);
+}
+
+.carousel-img-container div {
+    flex: 1 1 auto;
+}
+
+.carousel-img-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .carousel-selector > button {
@@ -122,7 +151,6 @@ body {
 }
 
 .dropdown-bounds {
-    /* border: 2px solid rgb(29, 29, 29); */
     top: -25px;
     right: 0px;
     height: 75px;
