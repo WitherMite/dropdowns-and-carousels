@@ -55,11 +55,6 @@ body {
     position: relative;
 }
 
-.carousel-img-container {
-    display: flex;
-    height: 15svh;
-}
-
 .carousel-selector {
     display: flex;
     gap: 0.75rem;
@@ -72,6 +67,13 @@ body {
 .carousel-wheel {
     max-width: 33vw;
     overflow: hidden;
+}
+
+.carousel-img-container {
+    position: relative;
+    /* left: -100%; moves carousel one image right */
+    display: flex;
+    height: 15svh;
 }
 
 .carousel-nav {

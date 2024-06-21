@@ -1,6 +1,4 @@
-import addCarouselBehavior from "./carousel-behavior.js";
-
-export default function initCarousel(obj, visibleImgCount) {
+export default function initCarousel(obj) {
   const carousel = typeof obj === "object" ? obj : JSON.parse(obj);
   const carouselElement = document.querySelector(`.${carousel.class}`);
   const wheel = document.createElement("div");
@@ -17,23 +15,10 @@ export default function initCarousel(obj, visibleImgCount) {
 
   carousel.images.forEach((image, index) => {
     const img = createImg(image);
-    const imgClass = `${carousel.class}-img-${index}`;
-    img.classList.add(imgClass);
     imageContainer.appendChild(img);
-    const selBtn = createSelectButton(imgClass);
+    const selBtn = createSelectButton(index);
     selector.appendChild(selBtn);
   });
-
-  addCarouselBehavior(
-    {
-      carouselElement,
-      wheel,
-      imageContainer,
-      selector,
-      imageCount: carousel.images.length,
-    },
-    visibleImgCount
-  );
 }
 
 function addNavBtns(carousel) {
@@ -57,9 +42,9 @@ function createImg(src) {
   return div;
 }
 
-function createSelectButton(imgClass) {
+function createSelectButton(imgIndex) {
   const button = document.createElement("button");
   button.classList.add("carousel-selector-node");
-  button.dataset.forImg = imgClass;
+  button.dataset.forImg = imgIndex;
   return button;
 }
