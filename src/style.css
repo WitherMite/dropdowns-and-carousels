@@ -40,17 +40,26 @@ body {
 
 .carousel-container,
 .carousel {
-    max-width: 85vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
+
 .carousel-container {
+    max-width: 85vw;
     justify-content: space-evenly;
 }
 
-.carousel-img-container,
+.carousel {
+    position: relative;
+}
+
+.carousel-img-container {
+    display: flex;
+    height: 15svh;
+}
+
 .carousel-selector {
     display: flex;
     gap: 0.75rem;
@@ -61,16 +70,17 @@ body {
 }
 
 .carousel-wheel {
-    position: relative;
+    max-width: 33vw;
+    overflow: hidden;
 }
 
-.carousel-wheel button {
+.carousel-nav {
     --height: 50px;
     --width: 30px;
     height: var(--height);
     width: var(--width);
     position: absolute;
-    top: calc(50% - calc(var(--height) / 2));
+    top: calc(33.333% - calc(var(--height) / 2));
     --side-positioning: calc(-1 * calc(var(--width) + 0.75rem));
     align-self: center;
     border-radius: 8px;
@@ -87,14 +97,17 @@ body {
 }
 
 .carousel-img-container div {
-    flex: 1 1;
+    flex: 1 0 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .carousel-img-container img {
-    max-width: 100%;
-    height: auto;
+    width: auto;
+    max-width: 33vw;
+    max-height: 100%;
+    border-radius: 8px;
 }
 
 .carousel-selector > button {

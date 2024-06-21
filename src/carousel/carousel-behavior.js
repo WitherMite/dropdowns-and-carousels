@@ -1,3 +1,3 @@
-export default function addCarouselBehavior(carousel) {
-  return carousel;
+export default function addCarouselBehavior(carousel, visibleImgCount) {
+  return [carousel, visibleImgCount];
 }
