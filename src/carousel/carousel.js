@@ -27,6 +27,7 @@ export default function initCarousel(obj) {
     wheel,
     imageContainer,
     selector,
+    imageCount: carousel.images.length,
   });
 }
 
@@ -34,6 +35,7 @@ function createWheel() {
   const wheel = document.createElement("div");
   const leftBtn = document.createElement("button");
   const rightBtn = leftBtn.cloneNode();
+
   leftBtn.textContent = "<";
   leftBtn.classList.add("carousel-nav-left");
   rightBtn.textContent = ">";
@@ -41,6 +43,7 @@ function createWheel() {
   wheel.appendChild(leftBtn);
   wheel.appendChild(rightBtn);
   wheel.classList.add("carousel-wheel");
+
   return wheel;
 }
 

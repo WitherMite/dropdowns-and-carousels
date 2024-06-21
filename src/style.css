@@ -27,6 +27,7 @@ body {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     color: var(--font-color);
     background-color: var(--background-color);
 }
@@ -45,11 +46,18 @@ body {
     align-items: center;
     gap: 1rem;
 }
+.carousel-container {
+    justify-content: space-evenly;
+}
 
 .carousel-img-container,
 .carousel-selector {
     display: flex;
     gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.125);
 }
 
 .carousel-wheel {
@@ -65,6 +73,9 @@ body {
     top: calc(50% - calc(var(--height) / 2));
     --side-positioning: calc(-1 * calc(var(--width) + 0.75rem));
     align-self: center;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.125);
 }
 
 .carousel-nav-left {
@@ -76,7 +87,9 @@ body {
 }
 
 .carousel-img-container div {
-    flex: 1 1 auto;
+    flex: 1 1;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-img-container img {
@@ -85,12 +98,13 @@ body {
 }
 
 .carousel-selector > button {
-    --diameter: 0.66rem;
+    --diameter: 18px;
     width: var(--diameter);
     height: var(--diameter);
     background-color: var(--font-color);
-    border: 1px solid rgb(32, 32, 32);
+    border: calc(var(--diameter) / 8) solid rgb(44, 44, 44);
     border-radius: 100%;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-selector > .selected {
@@ -110,7 +124,7 @@ body {
     padding: 1rem;
     background-color: var(--primary-color);
     border-radius: 12px;
-    box-shadow: 3px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.125);
     display: flex;
     justify-items: center;
     align-items: center;
