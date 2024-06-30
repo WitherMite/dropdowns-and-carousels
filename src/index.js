@@ -8,8 +8,8 @@ initCarousel({
   class: "img-group-1",
   images: [
     "https://picsum.photos/300/150",
-    "https://picsum.photos/300/150",
-    "https://picsum.photos/300/150",
+    "https://picsum.photos/302/151",
+    "https://picsum.photos/304/152",
   ],
 });
 initCarousel(carouselJSON);
