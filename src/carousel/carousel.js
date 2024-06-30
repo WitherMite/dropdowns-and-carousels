@@ -29,6 +29,7 @@ export default function initCarousel(obj) {
     imageContainer,
     selector,
     navBtns,
+    currentImage: 0,
     lastImgIndex: carousel.images.length - 1,
   });
 }
